@@ -1,13 +1,15 @@
 {
   "expo": {
-    "name": "sat-prep-app",
+    "name": "SAT Prep",
     "slug": "sat-prep-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.satprep",
+      "usesAppleSignIn": true
     },
     "android": {
       "adaptiveIcon": {
@@ -16,10 +18,20 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.example.satprep"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-web-browser",
+      "expo-apple-authentication"
+    ],
+    "scheme": "satprep",
+    "experiments": {
+      "typedRoutes": true
     }
   }
 }
