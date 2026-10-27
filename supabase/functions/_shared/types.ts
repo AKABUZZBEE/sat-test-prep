@@ -16,3 +16,10 @@ export interface Answer {
   choice: number | null;
   skipped: boolean;
 }
+
+export interface Layout {
+  /** Display order, as indexes into the set's questions. */
+  order: number[];
+  /** Per question: choices[displayed position] = original choice index. */
+  choices: Record<string, number[]>;
+}
